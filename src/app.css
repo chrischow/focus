@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-VariableFont_slnt,wght.ttf");
+}
+
+h1 {
+  @apply text-5xl font-semibold
+}
+
+h2 {
+  @apply text-3xl font-medium
+}
+
+h3 {
+  @apply text-2xl font-medium
+}
+
+h4 {
+  @apply text-xl font-medium
+}
+
+@layer base {
+  ul,
+  ol {
+    list-style: revert !important;
+    margin-left: 22px !important;
+  }
+}
