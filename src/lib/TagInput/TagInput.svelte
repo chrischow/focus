@@ -100,6 +100,6 @@
     use:blurOnEscape
     bind:value={newTag}
     on:keydown={handleEnterKeydown}
-    class="focus:outline-none bg-none focus:bg-slate-100 rounded-md px-2 py-1 text-sm text-slate-700"
+    class="focus:outline-none bg-none focus:bg-slate-50 rounded-md px-2 py-1 text-sm text-slate-700"
   />
 </div>

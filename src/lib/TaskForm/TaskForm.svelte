@@ -33,7 +33,7 @@
 
 <input
   use:customKeydown
-  class="focus:outline-none rounded-md w-full px-4 py-2 bg-transparent border-none !placeholder-slate-400 focus:bg-slate-100 text-slate-700 text-base"
+  class="focus:outline-none rounded-lg w-full px-4 py-2 bg-transparent border-none !placeholder-slate-400 focus:bg-slate-50 text-slate-700 text-base"
   placeholder="Add new task"
   size="lg"
   bind:value

@@ -53,33 +53,31 @@
 
 <div class="mt-8 flex flex-row gap-8">
   <div class="flex flex-1 flex-col">
-    <Heading tag="h3" class="font-semibold">Do</Heading>
+    <Heading tag="h5" class="font-semibold">Do</Heading>
     <hr class="mt-4 mb-4" />
     <Input
       color="base"
       placeholder="Search todos..."
       bind:value={todosSearchQuery}
-      class="rounded-full focus:ring-0 focus:outline-none focus:border-slate-500 mb-2 px-4 text-sm text-slate-600 placeholder-slate-400"
+      class="rounded-lg focus:ring-0 focus:outline-none focus:border-slate-500 bg-transparent mb-2 px-4 text-sm text-slate-600 placeholder-slate-400"
     />
-    <div class="mt-4">
-      <div class="flex flex-col">
-        {#if $todos}
-          {#each $todos as task (task.id)}
-            <TaskListItem {task} />
-          {/each}
-        {/if}
-      </div>
-      <TaskForm submitAction={createTask} />
+    <div class="flex flex-col">
+      {#if $todos}
+        {#each $todos as task (task.id)}
+          <TaskListItem {task} />
+        {/each}
+      {/if}
     </div>
+    <TaskForm submitAction={createTask} />
   </div>
   <div class="flex flex-1 flex-col">
-    <Heading tag="h3" class="font-semibold">Done</Heading>
+    <Heading tag="h5" class="font-semibold">Done</Heading>
     <hr class="mt-4 mb-4" />
     <Input
       color="base"
       placeholder="Search completed tasks..."
       bind:value={doneSearchQuery}
-      class="rounded-full focus:ring-0 focus:outline-none focus:border-slate-500 mb-2 px-4 text-sm text-slate-600 placeholder-slate-400"
+      class="rounded-lg focus:ring-0 focus:outline-none focus:border-slate-500 bg-transparent mb-2 px-4 text-sm text-slate-600 placeholder-slate-400"
     />
     <div class="mt-4">
       {#if $completeTasks}
@@ -94,7 +92,7 @@
 <div class="mt-4 flex justify-center">
   <Button
     color="light"
-    class="border-none py-1 px-4 text-base"
+    class="border-none py-1 px-3 text-base"
     on:click={() => {
       // @ts-ignore
       $path = '/'

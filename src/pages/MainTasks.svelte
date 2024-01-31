@@ -16,7 +16,7 @@
       color="base"
       placeholder="Search tasks..."
       bind:value={searchQuery}
-      class="rounded-full focus:ring-0 focus:outline-none focus:border-slate-500 mb-2 px-4 text-sm text-slate-600 placeholder-slate-400"
+      class="rounded-lg focus:ring-0 focus:outline-none focus:border-slate-500 bg-transparent mb-2 px-4 text-sm text-slate-600 placeholder-slate-400"
     />
     <TaskList {searchQuery} />
     <TaskForm submitAction={createTask} />
@@ -27,7 +27,7 @@
           // @ts-ignore
           $path = '/tasks'
         }}
-        class="border-none py-1 px-4 text-base flex-none">See all tasks</Button
+        class="border-none py-1 px-3 text-base flex-none">See all tasks</Button
       >
     </div>
   </div>

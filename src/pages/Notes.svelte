@@ -17,7 +17,7 @@
       color="base"
       placeholder="Search notes..."
       bind:value={searchQuery}
-      class="rounded-full focus:ring-0 focus:outline-none focus:border-slate-500 mb-2 px-4 text-sm text-slate-600 placeholder-slate-400"
+      class="rounded-lg focus:ring-0 focus:outline-none focus:border-slate-500 bg-transparent mb-2 px-4 text-sm text-slate-600 placeholder-slate-400"
     />
     <NoteList {searchQuery} />
     <Button
