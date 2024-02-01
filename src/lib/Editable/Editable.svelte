@@ -57,6 +57,6 @@
     bind:value={content}
     on:change={() => handleChange(content)}
     {placeholder}
-    class="block w-full bg-none border-none dark:bg-transparent dark:text-slate-400 focus:outline-none focus:bg-slate-50 focus:ring-0 rounded-md -ms-2 px-2 py-2 !mt-0 placeholder-slate-400 text-slate-600"
+    class="block w-full bg-none border-none dark:bg-transparent dark:text-slate-400 focus:outline-none focus:bg-slate-50 focus:ring-0 rounded-md -ms-2 px-2 py-2 !mt-0 placeholder-slate-400 dark:placeholder-slate-600 text-slate-600"
   />
 {/if}

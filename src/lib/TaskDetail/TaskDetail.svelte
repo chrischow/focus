@@ -89,11 +89,11 @@
 <h4>Cost</h4>
 <div class="flex flex-row gap-8 !mt-2">
   <div class="flex flex-1 flex-col items-start">
-    <div class="text-medium mb-2">Estimate</div>
+    <div class="text-base font-medium mb-2 text-slate-500">Estimate</div>
     <NumInput value={$task ? $task.costEstimate : 1} handleChange={handleCostEstimateChange} />
   </div>
   <div class="flex flex-1 flex-col items-start">
-    <div class="text-medium mb-2">Actual</div>
+    <div class="text-base font-medium mb-2 text-slate-500">Actual</div>
     <NumInput value={$task ? $task.costActual : undefined} handleChange={handleCostActualChange} />
   </div>
 </div>

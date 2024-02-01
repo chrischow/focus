@@ -84,7 +84,7 @@
   }
 </script>
 
-<div class="flex flex-wrap gap-2">
+<div class="flex flex-wrap gap-2 !mt-2">
   {#each tags as tag}
     <Badge large color="dark">
       {tag}
