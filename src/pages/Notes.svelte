@@ -21,7 +21,7 @@
     />
     <NoteList {searchQuery} />
     <Button
-      class="py-2 px-4 text-slate-400 text-base font-normal focus-within:ring-0 hover:underline hover:underline-offset-2 text-start"
+      class="py-2 px-4 text-slate-400 dark:text-slate-600 text-base font-normal focus-within:ring-0 hover:underline hover:underline-offset-2 text-start"
       on:click={() => {
         isNoteModalVisible = true
       }}>Add new note</Button

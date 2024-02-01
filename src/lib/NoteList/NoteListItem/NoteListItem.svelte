@@ -43,7 +43,7 @@
 
 <div class="flex flex-row space-between items-center">
   <Button
-    class="flex-1 justify-start px-0 text-slate-800 text-base font-normal focus-within:ring-0 hover:underline hover:underline-offset-2 text-start"
+    class="flex-1 justify-start px-0 text-slate-800 dark:text-slate-400 text-base font-normal focus-within:ring-0 hover:underline hover:underline-offset-2 text-start"
     on:click={() => (isNoteModalVisible = true)}
   >
     {note.title}
