@@ -24,6 +24,21 @@ A simple Chrome new tab extension for tracking todos and notes in the browser.
   - Filtering by tag for todos and notes
   - Tables for sorting and pagination
 
+## Gallery
+
+### Home
+<img width="800" alt="image" src="https://github.com/chrischow/focus/assets/13072656/9f762aee-0d4c-4e13-b8fc-091862e7a3cf">
+
+### Edit todos
+<img width="600" alt="image" src="https://github.com/chrischow/focus/assets/13072656/d4933c72-4ab1-4c97-964e-2003aab3b737">
+
+### Manage all todos
+<img width="800" alt="image" src="https://github.com/chrischow/focus/assets/13072656/febad04c-d7d8-4254-a297-910f8792a533">
+
+
+### Edit notes
+<img width="800" alt="image" src="https://github.com/chrischow/focus/assets/13072656/fca108c2-8dc2-4228-bb9b-e4893f2845f4">
+
 ## Motivation
 
 ### Help my self stay focused
