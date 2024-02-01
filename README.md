@@ -1,7 +1,7 @@
 # focus
 A simple Chrome new tab extension for tracking todos and notes in the browser.
 
-### About
+#### The geeky version;:
 ***focus*** is a client-side Single Page Application (SPA) built with [Svelte](https://svelte.dev/), [Flowbite](https://flowbite-svelte.com/), and [Tailwind](https://tailwindcss.com/), packaged into a Chrome new tab extension. For storage, it uses [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API), which is a client-side database available in [most browsers](https://caniuse.com/?search=indexeddb).
 
 <br />  
@@ -28,6 +28,21 @@ A simple Chrome new tab extension for tracking todos and notes in the browser.
   - Filtering by tag for todos and notes
   - Tables for sorting and pagination
 
+### Limitations
+Fundamentally, this product is not meant to compete with freemium/commercial solutions out there like Taskade (it looks awesome). It is a side project that supports usage on one computer.
+
+Features that I'm contemplating, purely because it helps with my work:
+
+- Task planning analytics:
+  - Task estimation (e.g. by man-days)
+  - Task completion
+
+Features that I know are useful for heavier duty use, but are not in the roadmap for now are:
+
+- Cross-device support, which requires some remote server that can do authentication and handle data storage
+- Data export and import
+- AI support e.g. grammar, auto-complete, recommendations
+
 ## Gallery
 
 ### Home
@@ -45,7 +60,7 @@ A simple Chrome new tab extension for tracking todos and notes in the browser.
 
 ## Motivation
 
-### Help my self stay focused
+### Help myself stay focused
 Staying focused requires effort. But, it's a little easier when you're reminded of the things you need to do at the right time and place. For me, that *right place* is in the browser, and the *right time* is just before I'm about to start Googling things that are unrelated to what I need to do.
 
 ### Help my team stay focused
