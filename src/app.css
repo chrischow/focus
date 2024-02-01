@@ -29,4 +29,8 @@ h4 {
     list-style: revert !important;
     margin-left: 22px !important;
   }
+
+  html::-webkit-scrollbar {
+    display: none
+  }
 }
