@@ -15,9 +15,13 @@ A simple Chrome new tab extension for tracking todos and notes in the browser.
 
 ### Coming Soon
 - For tasks:
-  - Mandatory deadline to force you to plan ahead
-  - Priority level
+  - New fields:
+    - Mandatory deadline to force you to plan ahead
+    - Mandatory priority level to force you to prioritise
+    - Completion date for sorting completed tasks, and possibly for analytics
   - Rich-text support for descriptions
+  - Sort incomplete tasks by priority and deadline
+  - Sort completed tasks by completion date
 - For notes:
   - Custom tags
 - For both:
