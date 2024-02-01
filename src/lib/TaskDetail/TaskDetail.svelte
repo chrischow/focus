@@ -3,6 +3,7 @@
   import { Button } from 'flowbite-svelte'
   import { CheckCircleSolid, CloseCircleSolid, TrashBinSolid } from 'flowbite-svelte-icons'
   import Editable from '../Editable/Editable.svelte'
+  import NumInput from '../NumInput/NumInput.svelte'
   import TagInput from '../TagInput/TagInput.svelte'
   import { db } from '../database/db'
   import { deleteTask } from '../database/tasks'
@@ -40,6 +41,29 @@
     // @ts-ignore
     db.tasks.update(taskId, { description: description })
   }
+
+  /**
+   * Update cost estimate upon change in input
+   * @param {number} cost
+   */
+  const handleCostEstimateChange = async (cost) => {
+    // @ts-ignore
+    await db.tasks.update(taskId, { costEstimate: cost })
+  }
+
+  /**
+   * Update actual cost upon change in input
+   * @param {number} cost
+   */
+  const handleCostActualChange = (cost) => {
+    if (cost) {
+      // @ts-ignore
+      db.tasks.update(taskId, { costActual: cost })
+    } else {
+      // @ts-ignore
+      db.tasks.update(taskId, { costActual: undefined })
+    }
+  }
 </script>
 
 <h3>
@@ -58,10 +82,21 @@
 />
 
 <h4>Tags</h4>
-
 {#if $task}
   <TagInput {taskId} tags={$task.tags} />
 {/if}
+
+<h4>Cost</h4>
+<div class="flex flex-row gap-8 !mt-2">
+  <div class="flex flex-1 flex-col items-start">
+    <div class="text-medium mb-2">Estimate</div>
+    <NumInput value={$task ? $task.costEstimate : 1} handleChange={handleCostEstimateChange} />
+  </div>
+  <div class="flex flex-1 flex-col items-start">
+    <div class="text-medium mb-2">Actual</div>
+    <NumInput value={$task ? $task.costActual : undefined} handleChange={handleCostActualChange} />
+  </div>
+</div>
 
 <div class="!mt-12 flex flex-row gap-4 justify-center">
   <Button on:click={toggleStatus} color={$task && $task.isDone ? 'light' : 'dark'} class="text-sm">

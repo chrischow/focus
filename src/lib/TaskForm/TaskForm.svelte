@@ -15,7 +15,7 @@
      */
     const handleKeydowns = (event) => {
       if (event.key === 'Enter') {
-        submitAction({ title: value, isDone: 0, tags: [], createdAt: new Date() })
+        submitAction({ title: value, isDone: 0, tags: [], costEstimate: 1, createdAt: new Date() })
         value = ''
       } else if (event.key === 'Escape') {
         node.blur()

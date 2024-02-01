@@ -6,6 +6,8 @@
  * @property {number} isDone
  * @property {Array<string>} tags
  * @property {Date} createdAt
+ * @property {number} costEstimate
+ * @property {number} [costActual]
  * @property {string} [parentId]
  * @property {Array<string>} [childrenIds]
  */
