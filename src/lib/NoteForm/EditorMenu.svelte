@@ -1,89 +1,106 @@
 <script>
-  import { Button } from 'flowbite-svelte'
   import { CodeOutline, ListSolid } from 'flowbite-svelte-icons'
   import Fa6SolidIndent from '~icons/fa6-solid/indent'
   import Fa6SolidOutdent from '~icons/fa6-solid/outdent'
   import LaListOl from '~icons/la/list-ol'
 
   export let editor
+
+  const buttonBaseClass = 'btn-base'
+  const buttonInactiveClass = 'btn-inactive'
+  const buttonActiveClass = 'btn-active'
+
+  /**
+   * Get base class and either inactive or active button class
+   * @param {boolean} isActive
+   */
+  const getButtonClass = (isActive) => {
+    if (isActive) {
+      return `${buttonBaseClass} ${buttonActiveClass}`
+    }
+    return `${buttonBaseClass} ${buttonInactiveClass}`
+  }
 </script>
 
-<Button
+<button
   on:click={() => editor.chain().focus().toggleBold().run()}
-  color={editor.isActive('bold') ? 'dark' : 'light'}
-  class="px-2 py-1 w-8"
+  class={getButtonClass(editor.isActive('bold'))}
 >
   B
-</Button>
-<Button
+</button>
+<button
   on:click={() => editor.chain().focus().toggleItalic().run()}
-  color={editor.isActive('italic') ? 'dark' : 'light'}
-  class="px-2 py-1 w-8"
+  class={getButtonClass(editor.isActive('italic'))}
 >
   I
-</Button>
-<Button
+</button>
+<button
   on:click={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}
-  color={editor.isActive('heading', { level: 1 }) ? 'dark' : 'light'}
-  class="px-2 py-1 w-8"
+  class={getButtonClass(editor.isActive('heading', { level: 1 }))}
 >
   H1
-</Button>
-<Button
+</button>
+<button
   on:click={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
-  color={editor.isActive('heading', { level: 2 }) ? 'dark' : 'light'}
-  class="px-2 py-1 w-8"
+  class={getButtonClass(editor.isActive('heading', { level: 2 }))}
 >
   H2
-</Button>
-<Button
+</button>
+<button
   on:click={() => editor.chain().focus().toggleHeading({ level: 3 }).run()}
-  color={editor.isActive('heading', { level: 3 }) ? 'dark' : 'light'}
-  class="px-2 py-1 w-8"
+  class={getButtonClass(editor.isActive('heading', { level: 3 }))}
 >
   H3
-</Button>
-<Button
+</button>
+<button
   on:click={() => editor.chain().focus().toggleHeading({ level: 4 }).run()}
-  color={editor.isActive('heading', { level: 4 }) ? 'dark' : 'light'}
-  class="px-2 py-1 w-8"
+  class={getButtonClass(editor.isActive('heading', { level: 4 }))}
 >
   H4
-</Button>
-<Button
+</button>
+<button
   on:click={() => editor.chain().focus().toggleCodeBlock().run()}
-  color={editor.isActive('codeBlock') ? 'dark' : 'light'}
-  class="px-2 py-1 w-8"
+  class={getButtonClass(editor.isActive('codeBlock'))}
 >
-  <CodeOutline />
-</Button>
-<Button
+  <CodeOutline class="h-3/5" />
+</button>
+<button
   on:click={() => editor.chain().focus().toggleBulletList().run()}
-  color={editor.isActive('bulletList') ? 'dark' : 'light'}
-  class="px-2 py-1 w-8"
+  class={getButtonClass(editor.isActive('bulletList'))}
 >
-  <ListSolid />
-</Button>
-<Button
+  <ListSolid class="h-1/2" />
+</button>
+<button
   on:click={() => editor.chain().focus().toggleOrderedList().run()}
-  color={editor.isActive('orderedList') ? 'dark' : 'light'}
-  class="p-0 w-8"
+  class={getButtonClass(editor.isActive('orderedList'))}
 >
-  <LaListOl />
-</Button>
-<Button
+  <LaListOl class="h-3/4" />
+</button>
+<button
   on:click={() => editor.chain().focus().sinkListItem('listItem').run()}
-  color={'light'}
-  class="p-0 w-8"
+  class={buttonBaseClass}
   disabled={!editor.can().sinkListItem('listItem')}
 >
-  <Fa6SolidIndent />
-</Button>
-<Button
+  <Fa6SolidIndent class="h-3/4" />
+</button>
+<button
   on:click={() => editor.chain().focus().liftListItem('listItem').run()}
-  color={'light'}
-  class="p-0 w-8"
+  class={getButtonClass(editor.isActive('codeBlock'))}
   disabled={!editor.can().liftListItem('listItem')}
 >
-  <Fa6SolidOutdent />
-</Button>
+  <Fa6SolidOutdent class="h-3/4" />
+</button>
+
+<style lang="postcss">
+  .btn-base {
+    @apply px-2 py-1 w-8 flex justify-center items-center text-sm border border-slate-300 rounded-lg dark:border-slate-600 disabled:text-slate-300 disabled:border-slate-200 dark:disabled:text-slate-700 dark:disabled:border-slate-700;
+  }
+
+  .btn-inactive {
+    @apply bg-transparent text-slate-700 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-700;
+  }
+
+  .btn-active {
+    @apply bg-slate-900 text-slate-200 hover:bg-slate-700 hover:text-slate-300 dark:text-slate-400 dark:bg-slate-900;
+  }
+</style>

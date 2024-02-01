@@ -40,7 +40,7 @@
 <Modal title={modalTitle} size="xl" bind:open={isNoteModalVisible} outsideclose>
   <input
     id="new-note-title"
-    class="block w-full !bg-none border-none focus:outline-none focus:bg-slate-100 focus:ring-0 rounded-md -ms-2 px-2 py-2 !mt-0 placeholder-slate-400 text-slate-700 text-lg font-medium"
+    class="block w-full !bg-transparent border-none focus:outline-none focus:bg-slate-100 focus:ring-0 rounded-md -ms-2 px-2 py-2 !mt-0 placeholder-slate-400 text-slate-700 dark:placeholder-slate-600 dark:text-slate-300 text-lg font-medium"
     placeholder="Note title"
     maxlength="64"
     bind:value={title}

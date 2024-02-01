@@ -59,7 +59,7 @@
       color="base"
       placeholder="Search todos..."
       bind:value={todosSearchQuery}
-      class="rounded-lg focus:ring-0 focus:outline-none focus:border-slate-500 bg-transparent mb-2 px-4 text-sm text-slate-600 placeholder-slate-400"
+      class="rounded-lg focus:ring-0 focus:outline-none focus:border-slate-500 bg-transparent dark:bg-slate-800 dark:focus:bg-slate-800 dark:border-none mb-2 px-4 text-sm text-slate-600 placeholder-slate-400"
     />
     <div class="flex flex-col">
       {#if $todos}
@@ -77,7 +77,7 @@
       color="base"
       placeholder="Search completed tasks..."
       bind:value={doneSearchQuery}
-      class="rounded-lg focus:ring-0 focus:outline-none focus:border-slate-500 bg-transparent mb-2 px-4 text-sm text-slate-600 placeholder-slate-400"
+      class="rounded-lg focus:ring-0 focus:outline-none focus:border-slate-500 bg-transparent dark:bg-slate-800 dark:focus:bg-slate-800 dark:border-none mb-2 px-4 text-sm text-slate-600 placeholder-slate-400"
     />
     <div class="mt-4">
       {#if $completeTasks}
@@ -92,7 +92,7 @@
 <div class="mt-4 flex justify-center">
   <Button
     color="light"
-    class="border-none py-1 px-3 text-base"
+    class="border-none py-1 px-3 text-base dark:text-slate-300"
     on:click={() => {
       // @ts-ignore
       $path = '/'

@@ -25,7 +25,8 @@
           heading: false,
           codeBlock: {
             HTMLAttributes: {
-              class: 'p-2 rounded-md bg-slate-700 text-slate-300',
+              class:
+                'p-2 rounded-md bg-slate-700 text-slate-300 dark:bg-slate-900 dark:text-slate-400',
             },
           },
           paragraph: {
@@ -43,7 +44,7 @@
       editorProps: {
         attributes: {
           class:
-            'outline-none focus:outline-none focus:bg-slate-50 text-slate-700 -mx-2 px-2 pt-2 pb-4 rounded-md',
+            'outline-none focus:outline-none focus:bg-slate-50 text-slate-700 dark:text-slate-300 dark:focus:bg-slate-700 dark:focus:text-slate-300 -mx-2 px-2 pt-2 pb-4 rounded-md',
         },
       },
     })

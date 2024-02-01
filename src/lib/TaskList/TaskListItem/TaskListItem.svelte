@@ -30,7 +30,7 @@
   </Button>
   <div class="w-full flex space-between">
     <Button
-      class="flex-1 justify-start m-0 p-0 text-slate-700 text-base font-normal focus-within:ring-0 hover:underline hover:underline-offset-2 text-start"
+      class="flex-1 justify-start m-0 p-0 text-slate-700 dark:text-slate-400 text-base font-normal focus-within:ring-0 hover:underline hover:underline-offset-2 text-start"
       on:click={() => (isModalVisible = true)}
     >
       {task.title}

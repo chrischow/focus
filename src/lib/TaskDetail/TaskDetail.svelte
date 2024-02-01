@@ -82,7 +82,7 @@
     color="red"
     class="text-sm"
   >
-    <TrashBinSolid class="me-2 focus:outline-none" />
+    <TrashBinSolid class="me-2 h-4 focus:outline-none" />
     Delete task
   </Button>
 </div>
